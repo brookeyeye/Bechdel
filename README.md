@@ -40,7 +40,7 @@ conda activate bechdelEnv
 
 Download this repository:
 ```bash
-git clone https://github.com/psharan7/Bechdel-NLP-Project.git
+git clone https://github.com/brookeyeye/Bechdel
 cd Bechdel-NLP-Project
 ```
 
