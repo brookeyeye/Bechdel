@@ -1,0 +1,13 @@
+pandas
+numpy
+seaborn
+matplotlib
+spacy
+textstat
+scikit-learn
+sentence-transformers
+torch
+transformers
+nrclex
+ipykernel
+notebook
