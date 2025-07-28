@@ -41,7 +41,7 @@ conda activate bechdelEnv
 Download this repository:
 ```bash
 git clone https://github.com/brookeyeye/Bechdel
-cd Bechdel-NLP-Project
+cd Bechdel
 ```
 
 Install required packages: 
