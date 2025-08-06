@@ -19,22 +19,25 @@ The Bechdel Test was created by cartoonist Alison Bechdel in 1986 as a metric of
 ## Software and platform
 
 This project was developed using Python 3.13.5 on MacOS and requires the following packages:
-- pandas
-- numpy
-- seaborn
-- matplotlib
+- pandas>=2.0.0
+- numpy>=1.23.5
+- matplotlib>=3.7.0
+- seaborn>=0.12.0
+- scipy>=1.10.0
+- statsmodels>=0.14.0
+- scikit-learn>=1.3.0
+- ipykernel>=6.0.0
+- notebook>=7.0.0
 - spacy
 - textstat
-- scikit-learn
 - sentence-transformers
 - torch
-- transformers
 
 ## Installation
 
 Create a new environment:
 ```bash
-conda create -n bechdelEnv python=3.9
+conda create -n bechdelEnv --file new_bechdel_env.txt python=3.9
 conda activate bechdelEnv
 ```
 
@@ -46,7 +49,7 @@ cd Bechdel
 
 Install required packages: 
 ```bash
-pip install -r bechdel_env.txt
+pip install -r new_bechdel_env.txt
 ```
 
 Install SpaCY:
@@ -60,15 +63,15 @@ python -m spacy download en_core_web_sm
 Project/
 ├── The_Read_Me_File
 ├── Data/
-│   ├── InputData/
+│   ├── 1. InputData/
 │   │   ├── Input_Data_Files
 │   │   └── Metadata/
 │   │       ├── Data_Sources_Guide
 │   │       └── Codebooks
-│   ├── AnalysisData/
+│   ├── 2. AnalysisData/
 │   │   ├── Analysis_Data_Files
 │   │   └── The_Data_Appendix
-│   └── IntermediateData/
+│   └── 3. IntermediateData/
 ├── Scripts/
 │   ├── ProcessingScripts/
 │   ├── DataAppendixScripts/
@@ -79,15 +82,18 @@ Project/
     └── Results
 ```
 
+For detailed description of input data, see Project/Data/1. InputData/Metadata
+
 ## Features
 
 - Dataframe with 100,000+ lines of dialogue from 250+ films, tagged by gender of speaker
 - Text scored for:
   - Sentiment analysis
   - Flesch-Kincaid readability
-  - Syntactic role
+  - Syntactic role (dependency parsing)
   - Frequency of hedging words
   - Cosine similarity of male/female dialogue
+  - Frequency of imperative sentences
 - Statistical analysis:
   - Significance of the difference in above metrics for male/female dialogue
   - Correlation of Bechdel passing/failing with above metrics
